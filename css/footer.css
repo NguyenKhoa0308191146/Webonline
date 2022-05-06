@@ -1,0 +1,308 @@
+* {
+    /* reset page */
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* định dạng font chữ, background, khoảng cách ngoài 0 auto */
+    font-family: Arial;
+    background-color: white;
+    margin: 0 auto;
+}
+ul, li {
+    /* xóa các chỉ thị mục trong danh sách */
+    list-style: none;
+}
+a {
+    /* không gạch dưới text */
+    text-decoration: none;
+}
+#header {
+    /* định dạng màu chữ, font chữ, cỡ chữ, rộng: 100%, cao:70px */
+    /* cố định vị trí cho phần header (dùng position) */
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+
+}
+#logo {
+    /* định ví trí tuyệt đối logo, kết hợp cách trái 45px, top:8px */
+    position: absolute;
+    top: 8px;
+    left: 45px;
+}
+.header_top {
+    /* dùng backgoround là image: bg.png có lập lại, chiều cao: 60px */
+    /* canh lề trong khung tìm kiếm cách trên: 10px, dưới:0, trái-phải:10px */
+    /* sắp xếp các thành phần nằm ngang về phía bên phải */
+    background-image: url(../img/header/bg.png);
+    background-repeat: repeat-x;
+    height: 60px;
+    padding: 10px 10px 0;
+    text-align: right;
+}
+#searchform {
+    /* hiển thị các thẻ trong khung tìm kiếm thành dạng khối trên cùng 1 dòng */
+    /* sắp xếp các thành phần nằm ngang về phía bên phải */
+    display: flex;
+    justify-content: flex-end;
+}
+#searchform .item {
+    /* cho các item trong khung tìm kiếm trôi về bên trái */
+    /* canh lề ngoài các item cách trái :-17px */
+    /* canh lề trong các item cách trên-dưới-trái-phải: 0, trái-dưới:10px */
+    margin-left: -17px;
+    padding: 0 10px;
+    display: flex;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+#searchform #register {
+    /* khoảng cách dòng của link đăng nhập/ đăng ký: 15px */
+    /* canh lề ngoài link đăng nhập/ đăng ký: trên-dưới-trái-phải: 5px */
+    line-height: 15px;
+    margin: 5px;
+}
+#searchform #register a {
+    /* màu chữ link đăng nhập/ đăng ký */
+    color: #fff;
+}
+#searchform .search_textbox {
+    /* chiều rộng khung nhập tìm kiếm: 220px */
+    /* đường viền 1px kiểu đường nét thẳng màu #F7941D */
+    /* màu chữ #F7941D */
+    /* cho khung nhập tìm kiếm trôi về bên trái */
+    /* khung nhập tìm kiếm: cỡ chữ 11px, chiều cao 23px */
+    /* định vị trí tương đối, kết hợp cách trái : 24px */
+    /* canh lề ngoài khung nhập tìm kiếm cách trên-dưới-trái-phải: 0 */
+    /* canh lề ngoài khung nhập tìm kiếm cách trái: 5px*/
+    width: 220px;
+    color: #f7941d;
+    border: 1px solid #f7941d;
+    left: 24px;
+    font-size: 11px;
+    height: 23px;
+    position: relative;
+}
+#searchform .search_button {
+    /* màu nền icon search: #FFC3A5 */
+    /* cho icon search trôi về phía bên trái */
+    /* định vị trí tương đối icon search */
+    /* chiều cao icon search: 23px */
+    color: #ffc3a5;
+    height: 23px;
+    position: relative;
+    top: 1px;
+}
+#menu ul {
+    /* menu hiển thị từ phía bên phải (trôi về bên phải) */
+    /* chiều cao menu: 20px */
+    /* canh lề ngoài menu cách trên 11px */
+    height: 20px;
+    display: flex;
+    margin: 11px 0 0;  
+    justify-content: flex-end; 
+}
+#menu ul li {
+    border-right: 1px solid #ffbc9b;
+    height: 10px;
+    padding: 0 5px;
+}
+#menu ul li a {
+    font-size: 17px;
+    display: block;
+    margin-top: -5px;
+    color: #fff;
+    padding: 1px 7px;
+    /*height: 23px;*/
+}
+#menu ul li.cartimg {
+    border-right: 0 none;
+    margin: -5px 0px 10px 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: relative;
+}
+#menu ul li a.menu-active {
+    background: none repeat scroll 0 0 #831d1d;
+    border: 1px solid #f9cfb6;
+    border-radius: 5px;
+    height: 15px;
+    padding-bottom: 5px;
+}
+#menu ul li a.active, #menu ul li a:hover {
+    background-color: white;
+    border-radius: 5px;
+    color: #e0611d;
+}
+#flag {
+    margin-top: 5px;
+}
+#flag img:hover {
+    cursor: pointer;
+}
+#main {
+    background-image: url(../img/body/IMG_0828.JPG);
+    background-attachment: fixed;
+    background-size: 100%;
+    margin: 0 auto !important;
+    padding: 90px 110px !important;
+    z-index: 2;
+    min-height: 475px;
+}
+#footer {
+    background-image: url(../img/footer/bg_footer.png);
+    background-repeat: repeat-x;
+    padding-bottom: 0px;
+    font-size: 12px;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#footer .left-footer ul {
+    display: flex;
+}
+#footer .left-footer .item {
+    padding-left: 5px;
+}
+#footer .left-footer .item a {
+    display: block;
+    width: 28px;
+    height: 18px;
+    font-size: 20px;
+    color: #fff;
+    padding-top: -3px;
+}
+#footer .right-footer {
+    padding-right: auto;
+}
+#footer .right-footer ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2px;
+}
+#footer .right-footer ul li {
+    border: 1px solid #ffbc9b;
+    text-transform: lowercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-left: 5px;
+}
+#footer .right-footer ul li a {
+    color: #fff;
+}
+#footer .right-footer ul li:last-child {
+    border-right: none;
+}
+#footer .right-footer ul li:hover a {
+    background-color: #ffbc9b;
+}
+#main{
+    background-image: url(../img/body/IMG_0828.JPG);
+    background-attachment: fixed;
+    background-size: 100%;
+    margin: 0;
+    padding: 90px 110px;
+    z-index: 2;}
+#body_content{
+    width: 90%;
+    padding: auto;
+}
+#body_content #intro_dialog {
+    display: flex;
+    padding-bottom: 70px;
+}
+#intro_dialog .slidecaption {
+    width: 45%;
+    padding-left: 5%;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+#intro_dialog .slidecaption img {
+    width: 100%;
+    height: auto;
+}
+#intro_dialog .content_dialog {
+    width: 50%;
+    display: flex;
+}
+.content_dialog .main_content {
+    background-color: #fff;
+    border: 1px solid #f6f6f6;
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+}
+.content_dialog .arrow{
+    border-color: transparent white;
+    border-style: solid;
+    border-width: 20px 20px 20px 0px;
+    height: 0px;
+    position: relative;
+    top: 80px;
+}
+.content_dialog .main_content .tittle_dialog {
+    font-size: 25px;
+    font-style: bold;
+    font-family: cursive;
+}
+.content_dialog .main_content .description_dialog {
+    width: 60%;
+    margin-top: 35px;
+    font-size: 13px;
+}
+.content_dialog .main_content .button_our_food {
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
+    color: #fff;
+    font-style: bold;
+    background-color: #EF6E1D;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 30px;
+}
+.content_dialog .main_content .button_our_food:hover {
+    cursor: pointer;
+}
+.content_dialog .main_content img {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 155px;
+}
+#grid_containner #slide {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+#grid_containner ul li {
+    width: 23%;
+    margin-right: 10px;
+    margin-bottom: 35px;
+}
+#grid_containner ul li img {
+    width: 100%;
+    height: 100%;
+}
